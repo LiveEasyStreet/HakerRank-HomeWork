@@ -1,4 +1,4 @@
-package 해커랭크;
+package src.Java_Map;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -11,17 +11,17 @@ public class JavaMap {
 	public static final BufferedReader br;
 
 	static {
-		map = new HashMap<String, Integer>();
+		map = new HashMap<>();
 		br = new BufferedReader(new InputStreamReader(System.in));
 	}
 
 	public static void main(String[] args) {
 
 		try (br) {
-			int number = 0;
-			int test_case = 0;
-			String name = null;
-			String find_key = null;
+			int number;
+			int test_case;
+			String name;
+			String find_key;
 
 			test_case = Integer.parseInt(br.readLine());
 
