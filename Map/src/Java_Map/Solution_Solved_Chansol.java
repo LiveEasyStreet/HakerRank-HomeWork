@@ -1,4 +1,4 @@
-https://www.hackerrank.com/challenges/phone-book/problem?isFullScreen=true
+package solution;
 
 import java.util.*;
 
