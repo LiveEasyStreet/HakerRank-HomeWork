@@ -21,10 +21,10 @@ class Result {
         // Write your code here
 
 
-        Map<Character, Character> map = new HashMap<>();
+        Map<Character, Integer> map = new HashMap<>();
 
         for(int i = 0; i < s1.length(); i++) {
-            map.put(s1.charAt(i), s1.charAt(i));
+            map.put(s1.charAt(i), 1);
         }
         for(int i = 0; i < s2.length(); i++) {
             if(map.containsKey(s2.charAt(i))) {
@@ -37,10 +37,10 @@ class Result {
 
 }
 
-public class Solution {
+public class Yumi_Two_String {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int q = Integer.parseInt(bufferedReader.readLine().trim());
 
