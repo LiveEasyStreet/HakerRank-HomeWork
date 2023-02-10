@@ -1,4 +1,4 @@
-package src.Two_String;
+package src.Two_String.WonGyoon;
 
 import java.io.*;
 import java.util.*;
@@ -25,7 +25,7 @@ class Result {
     }
 }
 
-public class Sin_TwoStrings {
+public class TwoStrings {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));

@@ -1,11 +1,11 @@
-package src.Java_Map;
+package src.Java_Map.WonGyoon;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Sin_JavaMap {
+public class JavaMap {
 
 	public static Map<String, Integer> map;
 	public static final BufferedReader br;

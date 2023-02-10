@@ -1,10 +1,10 @@
-package src.Java_Map;
+package src.Java_Map.TaeKyoung;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class TK108_javaMap {
+public class JavaMap {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int cnt = sc.nextInt();
