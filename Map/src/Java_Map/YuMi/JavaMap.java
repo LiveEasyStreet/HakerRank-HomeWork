@@ -1,10 +1,10 @@
 // 작성자 : 하유미
 // 작성일 : 23-02-09 17:44
 //Complete this code or write your own from scratch
-package Java_Map;
+package Java_Map.YuMi;
 import java.util.*;
 
-public class Yumi_Map {
+public class JavaMap {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Map<String, Integer> map = new HashMap<>();

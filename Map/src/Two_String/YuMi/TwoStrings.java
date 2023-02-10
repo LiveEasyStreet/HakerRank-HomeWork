@@ -1,4 +1,4 @@
-package Two_String;// 작성자 : 하유미
+package Two_String.YuMi;// 작성자 : 하유미
 // 작성일 : 23-02-09 17:44
 
 import java.io.*;
@@ -37,7 +37,7 @@ class Result {
 
 }
 
-public class Yumi_Two_String {
+public class TwoStrings {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
