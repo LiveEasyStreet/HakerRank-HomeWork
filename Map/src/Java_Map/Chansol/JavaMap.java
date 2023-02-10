@@ -1,9 +1,9 @@
-package solution;
+package src.Java_Map.Chansol;
 
 import java.util.*;
 
 
-public class Solution_Solved02 {
+public class JavaMap {
 
 
 	public static void main(String[] args) {

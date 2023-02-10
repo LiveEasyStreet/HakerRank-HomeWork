@@ -1,4 +1,4 @@
-package solution;
+package src.Two_String.Chansol;
 
 import java.io.*;
 import java.util.*;
@@ -43,7 +43,7 @@ class Result {
 
 } // end class
 
-public class Solution_Solved03 {
+public class TwoString {
 	public static void main(String[] args) throws IOException {
 		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
