@@ -1,4 +1,4 @@
-package src.Java_Map.WonGyoon;
+package HW_23_02_10_MAP.Java_Map.WonGyoon;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

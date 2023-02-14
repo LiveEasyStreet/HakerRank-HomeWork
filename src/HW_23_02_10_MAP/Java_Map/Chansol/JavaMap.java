@@ -1,4 +1,4 @@
-package src.Java_Map.Chansol;
+package HW_23_02_10_MAP.Java_Map.Chansol;
 
 import java.util.*;
 

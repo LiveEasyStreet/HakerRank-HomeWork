@@ -1,10 +1,9 @@
-package Two_String.YuMi;// 작성자 : 하유미
-// 작성일 : 23-02-09 17:44
+package HW_23_02_10_MAP.Two_String.TaeKyoung;
 
 import java.io.*;
 import java.util.*;
 import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
+
 
 class Result {
 
@@ -18,26 +17,21 @@ class Result {
      */
 
     public static String twoStrings(String s1, String s2) {
-        // Write your code here
-
-
-        Map<Character, Integer> map = new HashMap<>();
-
-        for(int i = 0; i < s1.length(); i++) {
-            map.put(s1.charAt(i), 1);
+        Map<Character, Integer> map_t = new HashMap<>();
+        for (int i = 0; i < s1.length(); i++) {
+            map_t.put(s1.charAt(i), 1);
         }
-        for(int i = 0; i < s2.length(); i++) {
-            if(map.containsKey(s2.charAt(i))) {
+        for (int i = 0; i < s2.length(); i++) {
+            if (map_t.containsKey(s2.charAt(i))) {
                 return "YES";
             }
         }
-
         return "NO";
     }
 
 }
 
-public class TwoStrings {
+public class TwoString {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));

@@ -1,4 +1,4 @@
-package src.Two_String.Chansol;
+package HW_23_02_10_MAP.Two_String.Chansol;
 
 import java.io.*;
 import java.util.*;

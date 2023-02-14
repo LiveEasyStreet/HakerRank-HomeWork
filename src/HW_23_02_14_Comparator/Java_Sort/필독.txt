@@ -1,0 +1,8 @@
+링크
+https://www.hackerrank.com/challenges/java-sort/problem?isFullScreen=true
+
+수업시간에 배운 내용이긴 한데 잘 모르겠으면 구글링 충실히 할 것
+Collections.sort 와 Comparator을 쓸 것
+자신 이름으로 package를 만든 후 그 안에 과제파일 만들거나 넣을 것
+
+중요!!!! 복붙하면 인텔리제이로 열어서 자신의 과제 파일 패키지 경로 무조건 수정하고 자잘한 오류 없애고 커밋할것!!

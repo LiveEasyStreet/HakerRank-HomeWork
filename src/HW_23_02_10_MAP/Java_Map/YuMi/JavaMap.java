@@ -1,7 +1,7 @@
 // 작성자 : 하유미
 // 작성일 : 23-02-09 17:44
 //Complete this code or write your own from scratch
-package Java_Map.YuMi;
+package HW_23_02_10_MAP.Java_Map.YuMi;
 import java.util.*;
 
 public class JavaMap {

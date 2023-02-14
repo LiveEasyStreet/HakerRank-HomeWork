@@ -1,11 +1,12 @@
-package src.Two_String.HaYeong;
+package HW_23_02_10_MAP.Two_String.YuMi;// 작성자 : 하유미
+// 작성일 : 23-02-09 17:44
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.IntStream;
+import java.util.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
 
-class TwoString {
+class Result {
 
     /*
      * Complete the 'twoStrings' function below.
@@ -18,28 +19,28 @@ class TwoString {
 
     public static String twoStrings(String s1, String s2) {
         // Write your code here
+
+
         Map<Character, Integer> map = new HashMap<>();
 
-        for(Character c : s1.toCharArray()) {	//입력한 단어를 알파벳 하나씩 쪼개서 저장하기 위해 for문을 돌린다
-            map.put(c, 1);
-        } //for
+        for(int i = 0; i < s1.length(); i++) {
+            map.put(s1.charAt(i), 1);
+        }
+        for(int i = 0; i < s2.length(); i++) {
+            if(map.containsKey(s2.charAt(i))) {
+                return "YES";
+            }
+        }
 
-        for(Character c : s2.toCharArray()) {
-            if(map.containsKey(c)) {			//map네 키값이 있는지 확인
-                return "YES";				//존재할 경우 yes를 리턴
-            } //if
-        } //for
+        return "NO";
+    }
 
-        return "NO";								//아니면 no를 리턴
+}
 
-    } //twoStrings
-
-} //end class
-
-public class Solution {
+public class TwoStrings {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int q = Integer.parseInt(bufferedReader.readLine().trim());
 
@@ -49,7 +50,7 @@ public class Solution {
 
                 String s2 = bufferedReader.readLine();
 
-                String result = TwoString.twoStrings(s1, s2);
+                String result = Result.twoStrings(s1, s2);
 
                 bufferedWriter.write(result);
                 bufferedWriter.newLine();
@@ -60,5 +61,5 @@ public class Solution {
 
         bufferedReader.close();
         bufferedWriter.close();
-    } //main
-} //end class
+    }
+}
