@@ -1,16 +1,10 @@
-package src.Two_String.YeRIm;
+package HW_23_02_10_MAP.Two_String.YeRIm;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
 import java.util.stream.*;
+
 import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
 
 class Result {
 
@@ -26,11 +20,13 @@ class Result {
     static String twoStrings(String s1, String s2) {
         Set<String> set = new HashSet<String>();
         String[] c1 = s1.split("");
+
         for (String a : c1)
             set.add(a);
+
         for (String a : set)
-            if (s2.contains(a))
-                return "YES";
+            if (s2.contains(a)) return "YES";
+
         return "NO";
     }
 
