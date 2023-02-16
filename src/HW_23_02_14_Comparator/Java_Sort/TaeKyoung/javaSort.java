@@ -1,59 +1,69 @@
 package HW_23_02_14_Comparator.Java_Sort.TaeKyoung;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
-public class javaSort {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int input_len=sc.nextInt();
-        sc.nextLine();
-        String[] strList = new String[input_len];
-        for(int i=0;i<input_len;i++){
-            String temp  = sc.nextLine();
-            strList[i]=temp;
-        }
-        Arrays.sort(strList,new myOrder());
-        for(int i=0;i<input_len;i++){
-            System.out.println(strList[i].split(" ")[1]);
-        }
+class Student{
+    private int id;
+    private String fname;
+    private double cgpa;
+    public Student(int id, String fname, double cgpa) {
+        super();
+        this.id = id;
+        this.fname = fname;
+        this.cgpa = cgpa;
+    }
+    public int getId() {
+        return id;
+    }
+    public String getFname() {
+        return fname;
+    }
+    public double getCgpa() {
+        return cgpa;
     }
 }
-class myOrder implements Comparator{
 
-    @Override
-    public int compare(Object o1, Object o2) {
-        String str_o1 = o1.toString();
-        double score_o1 = Double.parseDouble(str_o1.split(" ")[2]);
-        String str_o2 = o2.toString();
-        double score_o2 = Double.parseDouble(str_o2.split(" ")[2]);
-        if(score_o2>score_o1){
-            return 1;
+//Complete the code
+public class javaSort
+{
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+        int testCases = Integer.parseInt(in.nextLine());
+
+        List<Student> studentList = new ArrayList<Student>();
+        while(testCases>0){
+            int id = in.nextInt();
+            String fname = in.next();
+            double cgpa = in.nextDouble();
+
+            Student st = new Student(id, fname, cgpa);
+            studentList.add(st);
+
+            testCases--;
         }
-        else if (score_o2==score_o1){
-            String str1 = str_o1.split(" ")[1];
-            String str2 = str_o2.split(" ")[1];
-            if(str1.compareTo(str2)!=0){
-                return str1.compareTo(str2);
-                //return str1.toLowerCase().compareTo(str2.toLowerCase());
-            }else{
-                int i1 = Integer.parseInt(str_o1.split(" ")[0]);
-                int i2 = Integer.parseInt(str_o2.split(" ")[0]);
-                if(i2>i1){
-                    return -1;
-                }
-                else if(i1 == i2) {
-                    return 0;
-                }
-                else {
-                    return 1;
+        class myOrder implements Comparator<Student>{
+
+            @Override
+            public int compare(Student o1, Student o2) {
+                if(o1.getCgpa()==o2.getCgpa()){ //같으면
+                    if(o1.getFname().compareTo(o2.getFname())==0) {
+                        return o2.getId() - o1.getId();
+                    } else {
+                        return o1.getFname().compareTo(o2.getFname());
+                    }
+                }else {
+                    int temp = (int)((o2.getCgpa()-o1.getCgpa())*1000);
+                    return temp;
                 }
             }
         }
-        else {
+        Collections.sort(studentList,new myOrder());
 
-            return -1;
+        for(Student st: studentList){
+            System.out.println(st.getFname());
         }
     }
 }
+
+
+
