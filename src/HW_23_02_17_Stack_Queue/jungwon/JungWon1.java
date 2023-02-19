@@ -1,4 +1,4 @@
-package HW_23_02_17_Stack_Queue;
+package HW_23_02_17_Stack_Queue.jungwon;
 
 import java.util.*;
 

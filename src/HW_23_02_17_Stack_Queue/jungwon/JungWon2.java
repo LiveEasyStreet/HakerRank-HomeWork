@@ -1,4 +1,4 @@
-package HW_23_02_17_Stack_Queue;
+package HW_23_02_17_Stack_Queue.jungwon;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -21,7 +21,7 @@ class JungWon2 {
 
                 char temp = input.charAt(i);
                 if (temp == '(' || temp == '[' || temp == '{') {
-                    stack.addLast(temp);
+                    stack.push(temp);
                     continue;
                 }
 
@@ -30,7 +30,7 @@ class JungWon2 {
                     break;
                 }
 
-                char temp2 = stack.pollLast();
+                char temp2 = stack.pop();
                 if (temp == ')' & temp2 != '(') {
                     tempBool = false;
                     break;
